@@ -27,4 +27,26 @@ public class HelloController {
         return "hello" + name;
     }
 //    when you use @ResponseBody, it WONT USE RESOLVER
+
+    @GetMapping("hello-api")
+    @ResponseBody
+    public Hello helloApi(@RequestParam("name") String name){
+        Hello hello = new Hello();
+        hello.setName(name);
+        return hello;
+//        Will return JSON if you return a OBJECT
+    }
+
+    static class Hello {
+        private  String name;
+
+        public  String getName() {
+            return name;
+        }
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+
+
 }
