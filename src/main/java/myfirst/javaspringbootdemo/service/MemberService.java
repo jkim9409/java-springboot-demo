@@ -9,8 +9,12 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
 
+
+    private final MemberRepository memberRepository;
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 //    sign-up
     public long join(Member member) {
 
