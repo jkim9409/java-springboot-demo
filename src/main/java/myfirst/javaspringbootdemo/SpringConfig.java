@@ -1,5 +1,6 @@
 package myfirst.javaspringbootdemo;
 
+import myfirst.javaspringbootdemo.aop.TimeTraceAop;
 import myfirst.javaspringbootdemo.repository.*;
 import myfirst.javaspringbootdemo.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,11 @@ public class SpringConfig {
 //        return new JdbcMemberRepository(dataSource);
 //        return new JdbcTemplateMemberRepository(dataSource);
 //        return new JpaMemberRepository(em);
+//    }
+
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
 //    }
 
 }
