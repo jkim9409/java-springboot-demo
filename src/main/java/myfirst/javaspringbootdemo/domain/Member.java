@@ -1,7 +1,12 @@
 package myfirst.javaspringbootdemo.domain;
 
+import javax.persistence.*;
+
+//we need entity mapping for JPA
+@Entity
 public class Member {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
